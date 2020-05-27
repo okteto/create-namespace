@@ -1,4 +1,4 @@
-name: "Create Namespace"
+name: "Okteto Create Namespace"
 description: "Create a namespace in Okteto Cloud"
 inputs:
   namespace: 
@@ -9,3 +9,6 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.namespace }}
+branding:
+  color: 'green'
+  icon: 'grid'
