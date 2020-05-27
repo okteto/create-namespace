@@ -1,4 +1,4 @@
-name: "Okteto Create Namespace"
+name: "Create Namespace"
 description: "Create a namespace in Okteto Cloud"
 inputs:
   namespace: 
