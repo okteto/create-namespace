@@ -19,7 +19,7 @@ You can use this action to create a namespace in Okteto Cloud as part of your au
 
 ### `share`
 
-The list users that will have access to the namespace on Okteto. Separate them with a comma if you are using more than one. You can use either their Okteto username or their email.
+The list of users that will have access to the namespace on Okteto. Separate them with a comma if you are using more than one. You can use either their Okteto username or their email.
 
 
 ## Example usage
@@ -48,4 +48,3 @@ jobs:
         namespace: devenvs-cindylopez
         share: cindylopez,rberrelleza,pchico83
 ```
-
