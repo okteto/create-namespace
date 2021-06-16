@@ -7,5 +7,13 @@ if [ -z $namespace ]; then
   exit 1
 fi
 
-echo running: okteto create namespace $namespace
-okteto create namespace $namespace
+share=$2
+members=""
+IFS=","
+for v in $share
+do
+   members="-m $v $members"
+done
+
+echo running: okteto create namespace $namespace $members
+eval okteto create namespace $namespace $members

@@ -4,11 +4,15 @@ inputs:
   namespace: 
     description: "The name of the namespace"
     required: true
+  share: 
+    description: "Comma-separated list of users that will have access to the namespace in Okteto;  you can use the username or email"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.namespace }}
+    - ${{ inputs.share }}
 branding:
   color: 'green'
   icon: 'grid'
