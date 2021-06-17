@@ -1,0 +1,7 @@
+name: create-namespace
+autocreate: true
+workdir: /usr/src/app
+image: okteto.dev/action
+command: sh
+sync:
+- .:/usr/src/app
