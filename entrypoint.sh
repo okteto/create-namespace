@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 namespace=$1
 if [ -z $namespace ]; then
@@ -12,7 +11,8 @@ membersArg=""
 IFS=","
 for v in $members
 do
-   if [[ $v =~ [';:!#$%^&*() '] ]]; then
+   verify=$(expr match "$v" ';:!#$%^&*() ')
+   if [[ verify -gt 0 ]]; then
     echo "the members parameters contains invalid characters"
     exit 1
   fi
