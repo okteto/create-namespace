@@ -12,7 +12,12 @@ membersArg=""
 IFS=","
 for v in $members
 do
-   membersArg="-m $v $membersArg"
+   if [[ $v =~ [';:!#$%^&*() '] ]]; then
+    echo "the members parameters contains invalid characters"
+    exit 1
+  fi
+    
+   membersArg="-m '$v' $membersArg"
 done
 
 echo running: okteto create namespace $namespace $membersArg
