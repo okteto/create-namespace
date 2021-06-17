@@ -11,8 +11,9 @@ membersArg=""
 IFS=","
 for v in $members
 do
-   verify=$(expr match "$v" ';:!#$%^&*() ')
-   if [[ verify -gt 0 ]]; then
+
+   verify=$(echo $v | egrep -c "[;:!#$%^&*() ]" )
+   if [[ "$verify" -gt 0 ]]; then
     echo "the members parameters contains invalid characters"
     exit 1
   fi
