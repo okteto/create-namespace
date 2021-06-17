@@ -7,5 +7,18 @@ if [ -z $namespace ]; then
   exit 1
 fi
 
-echo running: okteto create namespace $namespace
-okteto create namespace $namespace
+members=$2
+membersArg=""
+IFS=","
+for v in $members
+do
+   if [[ $v =~ [';:!#$%^&*() '] ]]; then
+    echo "the members parameters contains invalid characters"
+    exit 1
+  fi
+    
+   membersArg="-m '$v' $membersArg"
+done
+
+echo running: okteto create namespace $namespace $membersArg
+eval okteto create namespace $namespace $membersArg

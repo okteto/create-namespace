@@ -15,7 +15,14 @@ You can use this action to create a namespace in Okteto Cloud as part of your au
 
 **Required**  The name of the Okteto namespace to create.
 
-> Remember that the namespace name must have your github ID as a suffix.
+> Remember that the namespace name must have your github ID as a suffix if you're using Okteto Cloud
+
+### `members`
+
+The list of users that will have access to the namespace on Okteto. Separate them with a comma if you are using more than one. You can use either their Okteto username or their email.
+
+The creator of the namespace will automatically have access to the namespace in Okteto.
+
 
 ## Example usage
 
@@ -41,5 +48,5 @@ jobs:
       uses: okteto/create-namespace@master
       with:
         namespace: devenvs-cindylopez
+        members: rberrelleza,pchico83
 ```
-
