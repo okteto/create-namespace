@@ -7,5 +7,6 @@ if [ -z $namespace ]; then
   exit 1
 fi
 
+export OKTETO_HOME=$RUNNER_TEMP
 echo running: okteto create namespace $namespace
 okteto create namespace $namespace
