@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -ex
 
 namespace=$1
 if [ -z $namespace ]; then
@@ -11,4 +11,4 @@ export OKTETO_HOME=$RUNNER_TEMP
 mkdir -p $OKTETO_HOME
 ls -la $OKTETO_HOME
 echo running: okteto create namespace $namespace
-okteto create namespace $namespace
+okteto create namespace -l=debug $namespace
