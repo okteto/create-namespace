@@ -9,5 +9,6 @@ fi
 
 export OKTETO_HOME=$RUNNER_TEMP
 mkdir -p $OKTETO_HOME
+ls -la $OKTETO_HOME
 echo running: okteto create namespace $namespace
 okteto create namespace $namespace
