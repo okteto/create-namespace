@@ -23,6 +23,11 @@ The list of users that will have access to the namespace on Okteto. Separate the
 
 The creator of the namespace will automatically have access to the namespace in Okteto.
 
+## Environment variables
+
+### `CUSTOM_CERTIFICATE`
+
+The self-signed certificate of your environment. Best set on global level when using multiple Okteto actions.
 
 ## Example usage
 
