@@ -6,7 +6,7 @@ if [ -z $namespace ]; then
   exit 1
 fi
 
-if [[ ! -z "$OKTETO_CA_CERT" ]]; then
+if [ ! -z "$OKTETO_CA_CERT" ]; then
    echo "Custom certificate is provided"
    echo "$OKTETO_CA_CERT" > /usr/local/share/ca-certificates/okteto_ca_cert
    update-ca-certificates
@@ -19,7 +19,7 @@ for v in $members
 do
 
    verify=$(echo $v | egrep -c "[;:!#$%^&*() ]" )
-   if [[ "$verify" -gt 0 ]]; then
+   if [ "$verify" -gt 0 ]; then
     echo "the members parameters contains invalid characters"
     exit 1
   fi
