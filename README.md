@@ -40,12 +40,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: okteto/login@master
+    - uses: okteto/login@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - name: "Create devlopment environments namespace"
-      uses: okteto/create-namespace@master
+      uses: okteto/create-namespace@latest
       with:
         namespace: devenvs-cindylopez
         members: rberrelleza,pchico83
@@ -73,12 +73,12 @@ jobs:
        OKTETO_CA_CERT: ${{ secrets.OKTETO_CA_CERT }}
      steps:
      
-     - uses: okteto/login@master
+     - uses: okteto/login@latest
        with:
          token: ${{ secrets.OKTETO_TOKEN }}
      
     - name: "Create devlopment environments namespace"
-      uses: okteto/create-namespace@master
+      uses: okteto/create-namespace@latest
       with:
         namespace: devenvs-cindylopez
         members: rberrelleza,pchico83
