@@ -26,7 +26,7 @@ The creator of the namespace will automatically have access to the namespace in 
 
 ## Example usage
 
-This example runs the login action and then activates a namespace.
+This example runs the context action and then activates a namespace.
 
 ```yaml
 # File: .github/workflows/workflow.yml
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: okteto/login@latest
+    - uses: okteto/context@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
@@ -73,7 +73,7 @@ jobs:
        OKTETO_CA_CERT: ${{ secrets.OKTETO_CA_CERT }}
      steps:
      
-     - uses: okteto/login@latest
+     - uses: okteto/context@latest
        with:
          token: ${{ secrets.OKTETO_TOKEN }}
      
