@@ -27,5 +27,8 @@ do
    membersArg="-m '$v' $membersArg"
 done
 
-echo running: okteto create namespace $namespace $membersArg
-eval okteto create namespace $namespace $membersArg
+echo running: okteto namespace create $namespace $membersArg
+eval okteto namespace create $namespace $membersArg
+
+echo running: okteto kubeconfig
+eval okteto kubeconfig
