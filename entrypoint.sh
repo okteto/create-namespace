@@ -27,7 +27,7 @@ do
    membersArg="-m '$v' $membersArg"
 done
 
-log_level=$7
+log_level=$3
 if [ ! -z "$log_level" ]; then
   if [ "$log_level" = "debug" ] || [ "$log_level" = "info" ] || [ "$log_level" = "warn" ] || [ "$log_level" = "error" ] ; then
     log_level="--log-level ${log_level}"
