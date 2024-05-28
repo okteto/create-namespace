@@ -21,6 +21,10 @@ The list of users that will have access to the namespace on Okteto. Separate the
 
 The creator of the namespace will automatically have access to the namespace in Okteto.
 
+### `log-level`
+
+Log level used. Supported values are: `debug`, `info`, `warn`, `error`. (defaults to warn)
+
 ## Example usage
 
 This example runs the context action and then activates a namespace.
